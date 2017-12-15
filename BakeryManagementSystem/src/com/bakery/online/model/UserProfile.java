@@ -2,6 +2,9 @@ package com.bakery.online.model;
 
 import javax.persistence.*;
 
+import com.bakery.online.model.stock.Item;
+import java.util.*;
+
 @Entity
 @Table(name = "bms_user_profile", catalog = "bmsdb")
 @TableGenerator(name = "prof_tab_gen", allocationSize = 1, initialValue = 100, catalog = "bmsdb", table = "bms_table_gen", pkColumnName = "name", valueColumnName = "value", pkColumnValue = "prof_id")
@@ -19,7 +22,9 @@ public class UserProfile  {
 	private String mobileNo;
 	private Address address;
 	private UserCredential credential;
-
+	@OneToMany
+	@JoinColumn(name="item_id")
+    private Set<Item> item=new HashSet<>() ;
 	
 	public Integer getId() {
 		return id;

@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name ="bms_cart",catalog="bmsdb")
 @PrimaryKeyJoinColumn( name ="item_id")
 public class Cart extends Item {
-	
 	@Column( name = "item_id")
 	int itemId;
 	@Column( name = "user_id")

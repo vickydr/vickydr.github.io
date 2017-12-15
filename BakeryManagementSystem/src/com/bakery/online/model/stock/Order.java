@@ -2,16 +2,19 @@ package com.bakery.online.model.stock;
 
 import javax.persistence.*;
 
+import com.bakery.online.model.UserCredential;
+
 @Entity
 @Table(name ="bms_order",catalog="bmsdb")
-@PrimaryKeyJoinColumn( name ="item_id")
 
 public class Order extends Item{
 	@Id@GeneratedValue
 	@Column( name = "order_id")
 	int orderId;
-	@Column( name = "item_id")
-	int itemId;
+	@JoinColumn(name="item_id")
+	private Item item;
+	@JoinColumn(name="id")
+	private UserCredential user;
 	@Column( name = "item_quantity")
 	int itemQuantity;
 	@Column( name = "item_price")

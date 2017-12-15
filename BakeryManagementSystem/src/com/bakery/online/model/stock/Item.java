@@ -3,6 +3,8 @@ package com.bakery.online.model.stock;
 
 import javax.persistence.*;
 
+import com.bakery.online.model.UserProfile;
+
 
 @Entity
 @Table(name ="bms_items",catalog="bmsdb")
@@ -23,6 +25,9 @@ public class Item {
 	String quantity;
 	@Column( name = "item_variety", nullable = false, length = 100)
 	String itemVariety;
+	@ManyToOne
+	@JoinColumn(name="id")
+	private UserProfile user;
 	public int getItemId() {
 		return itemId;
 	}
@@ -64,6 +69,12 @@ public class Item {
 	}
 	public void setItemVariety(String itemVariety) {
 		this.itemVariety = itemVariety;
+	}
+	public UserProfile getUser() {
+		return user;
+	}
+	public void setUser(UserProfile user) {
+		this.user = user;
 	}
 	
 	
