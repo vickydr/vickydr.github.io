@@ -3,7 +3,7 @@ package com.bakery.online.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "bms_user_credential", catalog = "bmsdb")
+@Table(name = "bms_user_credential", catalog = "prodb")
 public class UserCredential {
 
 	@Id

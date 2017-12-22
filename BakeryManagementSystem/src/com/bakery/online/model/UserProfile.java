@@ -6,7 +6,7 @@ import com.bakery.online.model.stock.Item;
 import java.util.*;
 
 @Entity
-@Table(name = "bms_user_profile", catalog = "bmsdb")
+@Table(name = "bms_user_profile", catalog = "prodb")
 @TableGenerator(name = "prof_tab_gen", allocationSize = 1, initialValue = 100, catalog = "bmsdb", table = "bms_table_gen", pkColumnName = "name", valueColumnName = "value", pkColumnValue = "prof_id")
 public class UserProfile  {
 

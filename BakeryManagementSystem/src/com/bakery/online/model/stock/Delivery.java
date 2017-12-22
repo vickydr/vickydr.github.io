@@ -1,13 +1,14 @@
 package com.bakery.online.model.stock;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name ="bms_deliver",catalog="bmsdb")
+@Table(name ="bms_deliver",catalog="prodb")
 @PrimaryKeyJoinColumn( name ="order_id")
 public class Delivery {
+	@Id
 	@Column( name = "order_id")
 	int orderId;
 	@Column(name = "date", nullable = false, length = 100)

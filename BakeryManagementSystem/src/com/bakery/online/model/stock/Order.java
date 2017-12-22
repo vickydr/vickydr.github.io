@@ -5,10 +5,10 @@ import javax.persistence.*;
 import com.bakery.online.model.UserCredential;
 
 @Entity
-@Table(name ="bms_order",catalog="bmsdb")
-
+@Table(name ="bms_order",catalog="prodb")
 public class Order extends Item{
-	@Id@GeneratedValue
+	@Id
+	@GeneratedValue
 	@Column( name = "order_id")
 	int orderId;
 	@JoinColumn(name="item_id")

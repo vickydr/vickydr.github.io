@@ -7,7 +7,7 @@ import com.bakery.online.model.UserProfile;
 
 
 @Entity
-@Table(name ="bms_items",catalog="bmsdb")
+@Table(name ="bms_items",catalog="prodb")
 
 public class Item {
 	@Id

@@ -6,7 +6,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="bms_cart",catalog="bmsdb")
+@Table(name ="bms_cart",catalog="prodb")
 @PrimaryKeyJoinColumn( name ="item_id")
 public class Cart extends Item {
 	@Column( name = "item_id")
